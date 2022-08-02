@@ -71,7 +71,7 @@
     </div>
   </section>
 
-  <section class="center slider">
+  <section class="responsive slider">
     <div>
       <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
     </div>
@@ -98,49 +98,6 @@
     </div>
     <div>
       <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-  </section>
-
-  <section class="variable slider">
-    <div>
-      <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-    <div>
-      <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-    <div>
-      <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-    <div>
-      <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-    <div>
-      <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-    <div>
-      <img src="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg">
-    </div>
-  </section>
-
-  <section class="lazy slider" data-sizes="50vw">
-    <div>
-      <img data-lazy="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg data-srcset="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 650w, https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg data-srcset="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 650w, https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 960w" data-sizes="100vw">
-    </div>
-    <div>
-     <img data-lazy="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg data-srcset="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 650w, https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 960w" data-sizes="100vw">
-    </div>
-    <div>
-    <img data-lazy="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg data-srcset="https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 650w, https://media.wired.co.uk/photos/606da902d9c09fc47d4c1bec/4:3/w_548,h_411,c_limit/413.jpeg 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <img data-lazy="http://placehold.it/350x300?text=5-350w"  data-srcset="http://placehold.it/650x300?text=5-650w 650w, http://placehold.it/960x300?text=5-960w 960w" data-sizes="100vw">
-    </div>
-    <div>
-      <!-- this slide should inherit the sizes attr from the parent slider -->
-      <img data-lazy="http://placehold.it/350x300?text=6-350w"  data-srcset="http://placehold.it/650x300?text=6-650w 650w, http://placehold.it/960x300?text=6-960w 960w">
     </div>
   </section>
 
@@ -148,60 +105,47 @@
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
     $(document).on('ready', function() {
-      $(".vertical-center-4").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 4,
-        slidesToScroll: 2
-      });
-      $(".vertical-center-3").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
-      $(".vertical-center-2").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 2,
-        slidesToScroll: 2
-      });
-      $(".vertical-center").slick({
-        dots: true,
-        vertical: true,
-        centerMode: true,
-      });
-      $(".vertical").slick({
-        dots: true,
-        vertical: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-      });
       $(".regular").slick({
         dots: true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3
       });
-      $(".center").slick({
-        dots: true,
+$('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
         infinite: true,
-        centerMode: true,
-        slidesToShow: 5,
-        slidesToScroll: 3
-      });
-      $(".variable").slick({
-        dots: true,
-        infinite: true,
-        variableWidth: true
-      });
-      $(".lazy").slick({
-        lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
-      });
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
     });
 </script>
 
